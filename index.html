@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Blog</title>
+    <meta name="author" content="Igor Melo">
+    <meta name="keywords" content="Layout, Blog, HTML, CSS, JavaScript">
+    <meta name="description" content="Um layout para blog responsivo feito com HTML, CSS e JavaScript">
+    <!-- Boxicons - Icons Library -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+
+
+    <!-- Start Header -->
+    <header class="header">
+
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="top-header__content container">
+                <!-- menu button-->
+                <button class="header__menu-button" title="Menu de opções" id="toggleMenuButton"><i
+                        class='bx bx-menu'></i></button>
+                <!--logo-->
+                <h1><a href="index.html" class="header__logo">Blog</a></h1>
+                <!--menu social-->
+                <ul class="social-group">
+                    <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-twitter'></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-facebook'></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-instagram'></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-youtube'></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-discord-alt'></i></a>
+                    </li>
+                    <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-twitch'></i></a></li>
+                </ul>
+                <!--search button-->
+                <button class="header__search-button" title="CLique aqui para pesquisar no Blog!"
+                    id="toggleSearchButton"><i class='bx bx-search'></i></button>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="main-header__content container">
+                <nav class="nav-header">
+                    <ul class="nav-header__list">
+                        <li class="list__item"><a href="#" class="list__link">Início</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Jogos</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Filmes e séries</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Desenhos</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Quadrinhos</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Animes e mangás</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Tecnologia</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Notícias</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Contato</a></li>
+                        <li class="list__item"><a href="#" class="list__link">Mais</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Search Form -->
+            <form action="search-form">
+                <input type="text" placeholder="Buscar no Blog" name="searchTerm" id="searchTerm">
+                <button type="submit" title="Clique aqui para pesquisar no Blog!"><i class='bx bx-search'></i></button>
+            </form>
+        </div>
+    </header>
+    <!-- End Header -->
+
+</body>
+
+</html>
