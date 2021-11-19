@@ -12,6 +12,8 @@
     <meta name="description" content="Um layout para blog responsivo feito com HTML, CSS e JavaScript">
     <!-- Boxicons - Icons Library -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 
 </head>
@@ -25,7 +27,7 @@
         <div class="top-header">
             <div class="top-header__content container">
                 <!-- menu button-->
-                <button class="header__menu-button" title="Menu de opções" id="toggleMenuButton"><i
+                <button class="header__button" title="Menu de opções" id="toggleMenuButton"><i
                         class='bx bx-menu'></i></button>
                 <!--logo-->
                 <h1><a href="index.html" class="header__logo">Blog</a></h1>
@@ -40,34 +42,38 @@
                     <li class="social__item"><a href="#" class="social__link"><i class='bx bxl-twitch'></i></a></li>
                 </ul>
                 <!--search button-->
-                <button class="header__search-button" title="CLique aqui para pesquisar no Blog!"
+                <button class="header__button" title="CLique aqui para pesquisar no Blog!"
                     id="toggleSearchButton"><i class='bx bx-search'></i></button>
             </div>
         </div>
 
         <!-- Main Header -->
-        <div class="main-header">
+        <div class="main-header" id="menu">
             <div class="main-header__content container">
                 <nav class="nav-header">
                     <ul class="nav-header__list">
-                        <li class="list__item"><a href="#" class="list__link">Início</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Jogos</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Filmes e séries</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Desenhos</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Quadrinhos</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Animes e mangás</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Tecnologia</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Notícias</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Contato</a></li>
-                        <li class="list__item"><a href="#" class="list__link">Mais</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link active">Início</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Jogos</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Filmes e séries</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Desenhos</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Quadrinhos</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Animes e mangás</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Tecnologia</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Notícias</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contato</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Mais</a></li>
                     </ul>
                 </nav>
+                <!-- Search Form -->
+                <form class="search-form">
+                   <div class="form__item">
+                    <input type="text" placeholder="Buscar no Blog" name="searchTerm" id="searchTerm">
+                    <button type="submit" title="Clique aqui para pesquisar no Blog!"><i
+                            class='bx bx-search'></i></button>
+                   </div>
+                </form>
             </div>
-            <!-- Search Form -->
-            <form action="search-form">
-                <input type="text" placeholder="Buscar no Blog" name="searchTerm" id="searchTerm">
-                <button type="submit" title="Clique aqui para pesquisar no Blog!"><i class='bx bx-search'></i></button>
-            </form>
+
         </div>
     </header>
     <!-- End Header -->
@@ -168,6 +174,18 @@
         </section>
         <!-- End Gallery -->
 
+
+        
+        <div class="adversiting adversiting--large-x container">
+            
+            <div class="adversiting__img">
+                <img src="assets/images/advert.jpg" alt="Anúncio">
+            </div>
+
+        </div>
+
+
+
         <!--Start main content -->
         <section class="posts container grid">
 
@@ -179,8 +197,8 @@
                     <h2 class="title-section">Posts Recentes</h2>
                     <div class="recents__content">
 
-                        <article class="medium-post medium-post--row">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post">
+                            <a href="#" class="medium-post__link d-block-link ">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -189,8 +207,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -199,8 +217,8 @@
                         </article>
 
 
-                        <article class="medium-post medium-post--row">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -209,8 +227,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -219,26 +237,28 @@
                         </article>
 
                         <article class="big-post">
-                            <a href="#" class="big-post__link">
+                            <a href="#" class="big-post__link d-block-link">
                                 <div class="big-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="big-post__container-text">
+                                   <div class="text-items">
                                     <div class="big-post__tags">
                                         <span class="big-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="big-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="big-post-datetime">Novembro 13, 2021</time>
-                                    <p class="big-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="big-post__datetime">Novembro 13, 2021</time>
+                                    <p class="big-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
+                                   </div>
                                 </div>
                             </a>
                         </article>
 
-                        <article class="medium-post medium-post--row">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -247,8 +267,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -257,8 +277,8 @@
                         </article>
 
 
-                        <article class="medium-post medium-post--row">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -267,8 +287,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -277,26 +297,28 @@
                         </article>
 
                         <article class="big-post">
-                            <a href="#" class="big-post__link">
+                            <a href="#" class="big-post__link d-block-link">
                                 <div class="big-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="big-post__container-text">
+                                   <div class="text-items">
                                     <div class="big-post__tags">
                                         <span class="big-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="big-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="big-post-datetime">Novembro 13, 2021</time>
-                                    <p class="big-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="big-post__datetime">Novembro 13, 2021</time>
+                                    <p class="big-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
+                                   </div>
                                 </div>
                             </a>
                         </article>
 
-                        <article class="medium-post medium-post--row">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -305,8 +327,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -315,8 +337,8 @@
                         </article>
 
 
-                        <article class="medium-post medium-post--row">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -325,8 +347,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -341,7 +363,7 @@
                 <!-- Start Navegation -->
                 <div class="navegation">
                     <ul class="navegation__list">
-                        <li class="navegation__item"><a href="#" class="navegation__link">1</a></li>
+                        <li class="navegation__item"><a href="#" class="navegation__link active">1</a></li>
                         <li class="navegation__item"><a href="#" class="navegation__link">2</a></li>
                         <li class="navegation__item"><a href="#" class="navegation__link">3</a></li>
                         <li class="navegation__item"><a href="#" class="navegation__link">4</a></li>
@@ -354,10 +376,10 @@
                 <section class="section mangas-animes">
                     <h2 class="title-section">Mangás e Animes</h2>
 
-                    <div class="mangas-animes__content">
+                    <div class="mangas-animes__content grid">
 
-                        <article class="medium-post">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post medium-post--column">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -366,8 +388,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -376,50 +398,50 @@
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
@@ -432,10 +454,9 @@
                 <section class="hqs">
                     <h2 class="title-section">HQs</h2>
 
-                    <div class="hqs__content">
-
-                        <article class="medium-post">
-                            <a href="#" class="medium-post__link">
+                    <div class="hqs__content grid">
+                        <article class="medium-post  medium-post--column">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -444,8 +465,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -453,8 +474,8 @@
                             </a>
                         </article>
 
-                        <article class="medium-post">
-                            <a href="#" class="medium-post__link">
+                        <article class="medium-post  medium-post--column">
+                            <a href="#" class="medium-post__link d-block-link">
                                 <div class="medium-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
@@ -463,8 +484,8 @@
                                         <span class="medium-post__tags__tag">Tecnologia</span>
                                     </div>
                                     <h3 class="medium-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="medium-post-datetime">Novembro 13, 2021</time>
-                                    <p class="medium-post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    <time class="medium-post__datetime">Novembro 13, 2021</time>
+                                    <p class="medium-post__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
                                         elit. Aenean elementum sem ac neque consectetur, eget hendrerit nibh pulvinar.
                                         Sed rhoncus malesuada tortor vitae mattis.
                                     </p>
@@ -474,49 +495,49 @@
 
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
@@ -530,119 +551,127 @@
             <!-- Start Side Posts -->
             <section class="side-posts">
 
+                <div class="adversiting">
+            
+                    <div class="adversiting__img">
+                        <img src="assets/images/advert.jpg" alt="Anúncio">
+                    </div>
+        
+                </div>
+
                 <!-- Start Most Popular Posts -->
                 <section class="most-popular">
                     <h2 class="title-section">Em Alta</h2>
 
-                    <div class="most-popular__posts">
+                    <div class="most-popular__posts grid">
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
@@ -651,78 +680,86 @@
                 </section>
                 <!-- End Most Popular Posts -->
 
+                <div class="adversiting adversiting--large-y">
+            
+                    <div class="adversiting__img">
+                        <img src="assets/images/advert.jpg" alt="Anúncio">
+                    </div>
+        
+                </div>
+
                 <!-- Start Series and Movies Posts -->
                 <section class="series-movies">
                     <h2 class="title-section">Séries e Filmes</h2>
 
 
-                    <div class="series-movies__content">
+                    <div class="series-movies__content grid">
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
 
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
@@ -734,37 +771,37 @@
                 <!-- Start curiosities Posts -->
                 <section class="curiosities">
                     <h2 class="title-section">Curiosidades</h2>
-                    <div class="curiosities__content">
+                    <div class="curiosities__content grid">
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
                         <article class="small-post">
-                            <a href="#" class="small-post__link">
+                            <a href="#" class="small-post__link d-block-link">
                                 <div class="small-post__container-img shadow">
                                     <img src="assets/images/windows11.jpg" alt="Windows 11" class="image">
                                 </div>
                                 <div class="small-post__container-text">
                                     <h3 class="small-post__title">Lorem Ipsum dolor</h3>
-                                    <time class="small-post-datetime">Novembro 13, 2021</time>
+                                    <time class="small-post__datetime">Novembro 13, 2021</time>
                                 </div>
                             </a>
                         </article>
@@ -790,6 +827,14 @@
                     </div>
                 </section>
                 <!-- End tags blog-->
+
+                <div class="adversiting">
+            
+                    <div class="adversiting__img">
+                        <img src="assets/images/advert.jpg" alt="Anúncio">
+                    </div>
+        
+                </div>
             </section>
             <!-- End Side Posts -->
         </section>
@@ -799,9 +844,21 @@
         <section class="reviews">
 
             <div class="reviews__content container">
-                <h1>Últimos Reviews</h1>
+                <h1 class="review__title">Últimos Reviews</h1>
 
-                <div class="reviews__content__group">
+                <div class="reviews__content__group grid">
+                    <div class="item">
+                        <div class="item__img">
+                            <img src="assets/images/jujutsu0.jpg" alt="Jujutsu Kaisen">
+                        </div>
+                        <h4 class="item__title">Título</h4>
+                    </div>
+                    <div class="item">
+                        <div class="item__img">
+                            <img src="assets/images/jujutsu0.jpg" alt="Jujutsu Kaisen">
+                        </div>
+                        <h4 class="item__title">Título</h4>
+                    </div>
                     <div class="item">
                         <div class="item__img">
                             <img src="assets/images/jujutsu0.jpg" alt="Jujutsu Kaisen">
@@ -866,15 +923,14 @@
     <footer class="footer">
 
         <!-- Start Footer Content -->
-        <div class="footer__content container">
+        <div class="footer__content container grid">
 
-
-            <h1 class="footer__logo">Blog</h1>
+            <h1><a href="#" class="footer__logo">Blog</a></h1>
 
 
             <div class="footer__child">
                 <h5 class="footer__title">Interesses</h5>
-                <ul class="nav-header__list">
+                <ul class="footer__list">
                     <li class="footer__item"><a href="#" class="footer__link">Início</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Jogos</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Filmes e séries</a></li>
@@ -933,6 +989,7 @@
     </footer>
 
 
+    <script src="assets/js/header.js"></script>
 </body>
 
 </html>

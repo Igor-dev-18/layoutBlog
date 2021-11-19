@@ -1,0 +1,9 @@
+:root{
+    --smaller-space: 0.5rem; /* 8px */
+    --small-space: 0.75rem; /* 12px */
+    --normal-space: 1rem; /* 16px */
+    --medium-space: 1.5rem; /* 20px */
+    --large-space: 1.25rem; /* 24px */
+    --x-large-space: 2rem; /* 32px */
+    --xx-large-space: 3.5rem; /* 56px */
+}

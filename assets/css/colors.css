@@ -1,0 +1,22 @@
+:root{
+    --first-color-00: #FC7F3F;
+    --first-color-01: #FD671A;
+    --first-color-02: #FA5A00;
+
+    --secondary-color-00: #E83F3A;
+    --secondary-color-01: #E81D17;
+    --secondary-color-02: #C20F0A;
+
+    --dark-color-00: #282828;
+    --dark-color-01: #1C1A19;
+    --dark-color-02: #0F0F0E;
+
+    --gray-color-00: #B8B8B8;
+    --gray-color-01: #9A9A9A;
+    --gray-color-02: #736D6D;
+
+    --white-color: #fff;
+
+    --bg-color: #F3F2F2;
+    --degrade-00: linear-gradient(285.31deg, #FD671A 1.33%, #FF002E 48.6%, #E81D17 100%);
+}
