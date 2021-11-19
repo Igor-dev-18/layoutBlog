@@ -14,5 +14,5 @@ O site LayoutBlog é um modelo fictício para um Blog, criado a partir de tecnol
 
 
 ## Layout: Versão Mobile 📱
-![Layout Versão Mobile](assets/images/Screenshot-LayoutBlog-Mobile.png)
+![Layout Versão Mobile](assets/images/Screenshot-layoutBlog-mobile.png)
 
